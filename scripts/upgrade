@@ -166,7 +166,7 @@ then
         # Create a temporary directory
         tmpdir="$(ynh_smart_mktemp min_size=300)"
 
-        ynh_setup_source --dest_dir="$tmpdir" --source_id="$source_id"
+        ynh_setup_source --dest_dir="$tmpdir" --source_id="$source_id" --full_replace=1
 
         # Backup the config file in the temp dir
         cp -a "$install_dir/config/config.php" "$tmpdir/config/config.php"
